@@ -84,8 +84,7 @@ class Wordsdearch {
             N4();
             Print(9,9,5,12);
             Answers(5,12);
-            //System.out.println("Sorry, this is not yet available");
-            //Custom();
+            //add backward words functionality
             break;
             case 5:
             System.out.println("Sorry, this is not yet available");
@@ -183,45 +182,30 @@ class Wordsdearch {
                     if (i==0||i==1||i==2){
                        ws_3n[i][j]=words3[0].charAt(i);
                     }
-                    //else {
-                    //    ws_3n[i][j]='z';
-                    //}
                 }
 
                 if (i==r2){
                     if (j==0||j==1||j==2){
                        ws_3n[i][j]=words3[1].charAt(j);
                     }
-                    //else {
-                    //    ws_3n[i][j]='z';
-                    //}
                 }
 
                 if (j==r3){
                     if (i==2||i==3||i==4){
                        ws_3n[i][j]=words3[2].charAt(i-2);
                     }
-                    //else {
-                    //    ws_3n[i][j]='z';
-                    //}
                 }
 
                 if (i==r4){
                     if (j==4||j==5||j==6){
                        ws_3n[i][j]=words3[3].charAt(j-4);
                     }
-                    //else {
-                    //    ws_3n[i][j]='z';
-                    //}
                 }
 
                 if (j==r5){
                     if (i==0||i==1||i==2){
                        ws_3n[i][j]=words3[4].charAt(i);
                     }
-                    //else {
-                    //    ws_3n[i][j]='z';
-                    //}
                 }
             }
         }
@@ -276,51 +260,75 @@ class Wordsdearch {
         words4_answers[2]=r3+",3."+r3+",6";
         words4_answers[3]="5,"+r4+".8,"+r4;
         words4_answers[4]="0,"+r5+".3,"+r5;
+        
+        //0 for forwards and 1 for backwards
+        int rd1 = ran.nextInt(2);
+        int rd2 = ran.nextInt(2);
+        int rd3 = ran.nextInt(2);
+        int rd4 = ran.nextInt(2);
+        int rd5 = ran.nextInt(2);
+        
         for (int i=0; i<9; i++){
             for (int j=0; j<9; j++){
                 if(i==r1){
                     if (j==0||j==1||j==2||j==3){
-                       ws_4n[i][j]=words4[0].charAt(j);
+                        if (rd1 == 0){
+                            ws_4n[i][j]=words4[0].charAt(j);
+                        }
+                        else {
+                            //backwards
+                        }
+                        
                     }
-                    //else {
-                    //    ws_3n[i][j]='z';
-                    //}
+                    
                 }
 
                 if (j==r2){
                     if (i==4||i==5||i==6||i==7){
-                       ws_4n[i][j]=words4[1].charAt(i-4);
+                        if (rd2==0){
+                            ws_4n[i][j]=words4[1].charAt(i-4);
+                        }
+                        else {
+                            //
+                        }
                     }
-                    //else {
-                    //    ws_3n[i][j]='z';
-                    //}
+                    
                 }
 
                 if (i==r3){
                     if (j==3||j==4||j==5||j==6){
-                       ws_4n[i][j]=words4[2].charAt(j-3);
+                        if (rd3==0){
+                            ws_4n[i][j]=words4[2].charAt(j-3);
+                        }
+                        else {
+                            //
+                        }
                     }
-                    //else {
-                    //    ws_3n[i][j]='z';
-                    //}
+                    
                 }
 
                 if (j==r4){
                     if (i==5||i==6||i==7||i==8){
-                       ws_4n[i][j]=words4[3].charAt(i-5);
+                        if (rd4==0){
+                            ws_4n[i][j]=words4[3].charAt(i-5);
+                        }
+                        else {
+                            //
+                        }
                     }
-                    //else {
-                    //    ws_3n[i][j]='z';
-                    //}
+                    
                 }
 
                 if (j==r5){
                     if (i==0||i==1||i==2||i==3){
-                       ws_4n[i][j]=words4[4].charAt(i);
+                        if (rd5==0){
+                            ws_4n[i][j]=words4[4].charAt(i);
+                        }
+                        else{
+                            //
+                        }
                     }
-                    //else {
-                    //    ws_3n[i][j]='z';
-                    //}
+                    
                 }
             }
         }
