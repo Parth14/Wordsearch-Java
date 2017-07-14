@@ -276,7 +276,7 @@ class Wordsdearch {
                             ws_4n[i][j]=words4[0].charAt(j);
                         }
                         else {
-                            //backwards
+                            ws_4n[i][j]=words4[0].charAt(3-j);
                         }
                         
                     }
@@ -289,7 +289,7 @@ class Wordsdearch {
                             ws_4n[i][j]=words4[1].charAt(i-4);
                         }
                         else {
-                            //
+                            ws_4n[i][j]=words4[1].charAt(7-i);
                         }
                     }
                     
@@ -301,7 +301,7 @@ class Wordsdearch {
                             ws_4n[i][j]=words4[2].charAt(j-3);
                         }
                         else {
-                            //
+                             ws_4n[i][j]=words4[2].charAt(6-j);
                         }
                     }
                     
@@ -313,7 +313,7 @@ class Wordsdearch {
                             ws_4n[i][j]=words4[3].charAt(i-5);
                         }
                         else {
-                            //
+                            ws_4n[i][j]=words4[3].charAt(8-i);
                         }
                     }
                     
@@ -325,7 +325,7 @@ class Wordsdearch {
                             ws_4n[i][j]=words4[4].charAt(i);
                         }
                         else{
-                            //
+                            ws_4n[i][j]=words4[4].charAt(3-i);
                         }
                     }
                     
@@ -393,9 +393,23 @@ class Wordsdearch {
         String a[] = {"0,0.3,0", "1,4.4,4", "7,1.7,6", "0,4.0,7", "6,3.6,7", "5,5.5,7", "0,1.4,1", "0,3.4,3"};
         String b[] = {"6,1.0,1", "7,3.1,3", "3,9.8,9", "6,0.1,0","8,0.8,7", "7,5.4,5", "9,4.9,9", "6,7.0,7", "8,8.2,8", "0,6.6,6"}  ;
         boolean correct = false;
+        boolean quitter = false;
         int left = num;
         while (left>0){
             String x = sc.next();
+            if(x.charAt(0) =='e'){
+                System.out.println("Do you really want to exit? [y/n]");
+                String e = sc.next();
+                if (e.equals("y")){
+                    System.out.println("Exiting...");
+                    quitter = true;
+                    left = -1;
+                }
+                else {
+                    System.out.println("Continuing...");
+                }
+                correct = true;
+            }
             for (int i=0; i<num; i++){
                 switch (mode){
                     case 1:
@@ -436,7 +450,7 @@ class Wordsdearch {
             }
         }
         long Time = (System.currentTimeMillis() - startTime)/1000;
-        System.out.println("Congratulations! You have parred this puzzel in " +Time + " s. ! Play another one");
+        if (quitter==false)System.out.println("Congratulations! You have completed this puzzle in " +Time + " s. ! Play another one");
         System.out.println();
         Menu();
         
