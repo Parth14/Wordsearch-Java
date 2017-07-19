@@ -25,10 +25,24 @@ class Wordsdearch {
         Menu();
     }
     public static void Menu (){
-        System.out.println("Main Menu");
-        System.out.println("Press 1 to play a pre-made game");
-        System.out.println("Press 2 to make your own game");
-        int x = sc.nextInt();
+        
+        int x = 0;
+        
+        while(true){
+            Scanner scc = new Scanner (System.in);
+            try {
+                System.out.println("Main Menu");
+                System.out.println("Press 1 to play a pre-made game");
+                System.out.println("Press 2 to make your own game");
+                x = scc.nextInt();
+                break;
+            }
+            catch(Exception e){
+                scc.close();
+                System.out.println("Enter only integers");
+            }
+        }
+        
         switch (x){
             case 1:
             Pre_made();
@@ -36,14 +50,32 @@ class Wordsdearch {
             case 2:
             Custom();
             break;
+            default:
+            System.out.println("Invalid input. Try again");
+            Menu();
+            break;
         }
         
     }
     public static void Pre_made (){
-        System.out.println("Press 1 for easy");
-        System.out.println("Press 2 for medium");
-        System.out.println("Press 3 for hard");
-        int x = sc.nextInt();
+        
+        int x = 0;
+        
+        while(true){
+            Scanner scc = new Scanner (System.in);
+            try {
+                System.out.println("Press 1 for easy");
+                System.out.println("Press 2 for medium");
+                System.out.println("Press 3 for hard");
+                x = scc.nextInt();
+                break;
+            }
+            catch(Exception e){
+                scc.close();
+                System.out.println("Enter only integers");
+            }
+        }
+        
         switch (x){
             case 1:
             Easy();
@@ -53,6 +85,11 @@ class Wordsdearch {
             break;
             case 3:
             Hard();
+            break;
+            default:
+            System.out.println("Invalid input. Try again");
+            Pre_made();
+            break;
         }
     }
     public static void Easy (){
@@ -68,8 +105,21 @@ class Wordsdearch {
         Menu();
     }
     public static void Custom (){
-        System.out.println("Choose the length of each word (3,4,5 or 6 letters).");
-        int x = sc.nextInt();
+        int x = 0;
+        
+        while(true){
+            Scanner scc = new Scanner (System.in);
+            try {
+                System.out.println("Choose the length of each word (3,4,5 or 6 letters).");
+                x = scc.nextInt();
+                break;
+            }
+            catch(Exception e){
+                scc.close();
+                System.out.println("Enter only integers");
+            }
+        }
+        
         switch (x){
             case 3:
             Accept(3,11);
