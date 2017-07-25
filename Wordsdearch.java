@@ -326,6 +326,7 @@ class Wordsdearch {
                             ws_4n[i][j]=words4[0].charAt(j);
                         }
                         else {
+                            words4_answers[0]=r1+",3."+r1+",0";
                             ws_4n[i][j]=words4[0].charAt(3-j);
                         }
                         
@@ -339,6 +340,7 @@ class Wordsdearch {
                             ws_4n[i][j]=words4[1].charAt(i-4);
                         }
                         else {
+                            words4_answers[1]="7,"+r2+".4,"+r2;
                             ws_4n[i][j]=words4[1].charAt(7-i);
                         }
                     }
@@ -351,6 +353,7 @@ class Wordsdearch {
                             ws_4n[i][j]=words4[2].charAt(j-3);
                         }
                         else {
+                             words4_answers[2]=r3+",6."+r3+",3";
                              ws_4n[i][j]=words4[2].charAt(6-j);
                         }
                     }
@@ -363,6 +366,7 @@ class Wordsdearch {
                             ws_4n[i][j]=words4[3].charAt(i-5);
                         }
                         else {
+                            words4_answers[3]="8,"+r4+".5,"+r4;
                             ws_4n[i][j]=words4[3].charAt(8-i);
                         }
                     }
@@ -375,6 +379,7 @@ class Wordsdearch {
                             ws_4n[i][j]=words4[4].charAt(i);
                         }
                         else{
+                            words4_answers[4]="3,"+r5+".0,"+r5;
                             ws_4n[i][j]=words4[4].charAt(3-i);
                         }
                     }
