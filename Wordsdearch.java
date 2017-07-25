@@ -34,6 +34,8 @@ class Wordsdearch {
                 System.out.println("Main Menu");
                 System.out.println("Press 1 to play a pre-made game");
                 System.out.println("Press 2 to make your own game");
+                System.out.println("Press 3 for instructions");
+                System.out.println("Press 4 to exit");
                 x = scc.nextInt();
                 break;
             }
@@ -50,12 +52,25 @@ class Wordsdearch {
             case 2:
             Custom();
             break;
+            case 3:
+            Instructions();
+            Menu();
+            break;
+            case 4:
+            System.exit(0);
+            break;
             default:
             System.out.println("Invalid input. Try again");
             Menu();
             break;
         }
         
+    }
+    public static void Instructions(){
+        System.out.println();
+        System.out.println("Once you find a word enter the starting and ending coordinates of the word seperated by a '.'.");
+        System.out.println("The format is : StartRow,StartColumn.EndRow,EndColumn");
+        System.out.println();
     }
     public static void Pre_made (){
         
