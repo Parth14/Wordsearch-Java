@@ -134,7 +134,8 @@ class Wordsdearch {
         while(true){
             Scanner scc = new Scanner (System.in);
             try {
-                System.out.println("Choose the length of each word (3,4,5 or 6 letters).");
+                System.out.println("Choose the length of each word (3 or 4 letters).");
+                //System.out.println("Choose the length of each word (3,4,5 or 6 letters).");
                 x = scc.nextInt();
                 break;
             }
@@ -161,7 +162,7 @@ class Wordsdearch {
             Answers(5,12);
             break;
 
-            case 5:
+            /*case 5:
             Accept(5,13);
             RandomL(11,11,13);
             N5();
@@ -174,7 +175,7 @@ class Wordsdearch {
             case 6:
             System.out.println("Sorry, this is not yet available");
             Custom();
-            break;
+            break;*/
 
             default:
             System.out.println("Invalid input. Try again");
@@ -471,7 +472,12 @@ class Wordsdearch {
         }
         for (int i=0; i<x; i++){
             System.out.println();
-            System.out.print(i+"  ");
+            if (i<10) {
+                System.out.print(i+"  ");
+            }
+            else {
+                System.out.print(i+" ");
+            }
             for (int j=0; j<y; j++){
                 switch (mode){
                     case 1:
@@ -491,7 +497,12 @@ class Wordsdearch {
                     break;
                 }
             }
-            System.out.print("  "+i);
+            if (i<10){
+                System.out.print("  "+i);
+            }
+            else {
+                System.out.print(" "+i);
+            }
         }
         System.out.println();
         System.out.print("   ");
