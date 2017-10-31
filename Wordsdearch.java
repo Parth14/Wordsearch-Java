@@ -185,7 +185,7 @@ class Wordsdearch {
     }
 
     public static void Accept(int length, int type){
-        System.out.println("Enter 5 words of length " + length + " each.");
+        System.out.println("Enter 5 words of length " + length + " each in small letters.");
         for (int i=0; i<5; i++){
             switch(type){
                 case 11:
@@ -193,7 +193,17 @@ class Wordsdearch {
                 if(words3[i].length()!=length){
                     System.out.println("Wrong length. Try again.");
                     i--;
+                    continue;
                 }
+                for(int j=0; j< length; j++){
+                    if(words3[i].charAt(j)>=97 && words3[i].charAt(j)<=122){
+                        continue;
+                    }
+                    System.out.println("Invalid character present. Try again.");
+                    i--;
+                    break;
+                }
+                //add check to see if input is only alphabets
                 break;
 
                 case 12:
@@ -201,6 +211,15 @@ class Wordsdearch {
                 if(words4[i].length()!=length){
                     System.out.println("Wrong length. Try again.");
                     i--;
+                    continue;
+                }
+                for(int j=0; j< length; j++){
+                    if(words4[i].charAt(j)>=97 && words4[i].charAt(j)<=122){
+                        continue;
+                    }
+                    System.out.println("Invalid character present. Try again.");
+                    i--;
+                    break;
                 }
                 break;
 
