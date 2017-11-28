@@ -86,7 +86,7 @@ class Wordsdearch {
             try {
                 System.out.println("Press 1 for easy");
                 System.out.println("Press 2 for medium");
-                System.out.println("Press 3 for hard");
+                //System.out.println("Press 3 for hard");
                 x = scc.nextInt();
                 break;
             }
@@ -103,9 +103,9 @@ class Wordsdearch {
             case 2:
             Medium();
             break;
-            case 3:
-            Hard();
-            break;
+            //case 3:
+            //Hard();
+            //break;
             default:
             System.out.println("Invalid input. Try again");
             Pre_made();
@@ -542,10 +542,10 @@ class Wordsdearch {
         int left = num;
         while (left>0){
             String x = sc.next();
-            if(x.charAt(0) =='e'){
+            if(x.equals("e")|| x.equals("exit")){
                 System.out.println("Do you really want to exit? [y/n]");
                 String e = sc.next();
-                if (e.equals("y")){
+                if (e.equals("y")||e.equals("yes")){
                     System.out.println("Exiting...");
                     quitter = true;
                     left = -1;
