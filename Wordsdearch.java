@@ -8,7 +8,7 @@ class Wordsdearch {
     //static char ws_3n[][]= {{'z','z','z','z','z','z','z'},{'z','z','z','z','z','z','z'},{'z','z','z','z','z','z','z'},{'z','z','z','z','z','z','z'},{'z','z','z','z','z','z','z'},{'z','z','z','z','z','z','z'},{'z','z','z','z','z','z','z'}};
     static char ws_3n[][]= new char[7][7];
     static char ws_4n[][]= new char[9][9];
-    static char ws_5n[][]= new char[11][11];
+    //static char ws_5n[][]= new char[11][11];
     static String easy_words[] = {"COAT", "COLD", "WINTER", "SNOW", "IGLOO", "ICE", "SCARF", "FROST"};
     static String medium_words[] = {"unsound", "ukulele", "carpet", "indent", "crossbar", "dunk", "fondue", "crimson", "novelty", "archaic"};
 
@@ -16,8 +16,8 @@ class Wordsdearch {
     static String words3_answers[]= new String [5];
     static String words4[]= new String [5];
     static String words4_answers[]= new String [5];
-    static String words5[]= new String [5];
-    static String words5_answers[]= new String [5];
+    //static String words5[]= new String [5];
+    //static String words5_answers[]= new String [5];
 
     static String alpha = "abcdefghijklmnopqrstuvwxyz";
     public static void main (String [] args){
@@ -123,10 +123,10 @@ class Wordsdearch {
         Answers(10,2);
     }
 
-    public static void Hard (){
-        System.out.println("Sorry, this is not yet available");
-        Pre_made();
-    }
+    //public static void Hard (){
+    //   System.out.println("Sorry, this is not yet available");
+    //    Pre_made();
+    //}
 
     public static void Custom (){
         int x = 0;
@@ -223,13 +223,13 @@ class Wordsdearch {
                 }
                 break;
 
-                case 13:
-                words5[i]=sc.next();
-                if(words5[i].length()!=length){
-                    System.out.println("Wrong length. Try again.");
-                    i--;
-                }
-                break;
+                //case 13:
+                //words5[i]=sc.next();
+                //if(words5[i].length()!=length){
+                //    System.out.println("Wrong length. Try again.");
+                //    i--;
+                //}
+                //break;
             }
         }
     }
@@ -245,9 +245,9 @@ class Wordsdearch {
                     case 12:
                     ws_4n[i][j]=alpha.charAt(ran.nextInt(26));
                     break;
-                    case 13:
-                    ws_5n[i][j]=alpha.charAt(ran.nextInt(26));
-                    break;
+                    //case 13:
+                    //ws_5n[i][j]=alpha.charAt(ran.nextInt(26));
+                    //break;
                 }
             }
         }
@@ -458,9 +458,9 @@ class Wordsdearch {
 
     }
 
-    public static void N5(){
+    //public static void N5(){
         //
-    }
+   // }
 
     public static void Print (int x, int y, int words, int mode){
 
@@ -479,9 +479,9 @@ class Wordsdearch {
                 case 12:
                 System.out.print(words4[i].toUpperCase()+" ");
                 break;
-                case 13:
-                System.out.print(words5[i].toUpperCase()+" ");
-                break;
+                //case 13:
+                //System.out.print(words5[i].toUpperCase()+" ");
+                //break;
             }
         }
         System.out.println();
@@ -511,9 +511,9 @@ class Wordsdearch {
                     case 12:
                     System.out.print(ws_4n[i][j]+ " ");
                     break;
-                    case 13:
-                    System.out.print(ws_5n[i][j]+ " ");
-                    break;
+                    //case 13:
+                    //System.out.print(ws_5n[i][j]+ " ");
+                    //break;
                 }
             }
             if (i<10){
@@ -585,13 +585,13 @@ class Wordsdearch {
                         correct = true;
                     }
                     break;
-                    case 13:
-                    if (words5_answers[i].equals(x)){
-                        System.out.println("Word "+words5[i]+" found! "+(--left)+ " left.");
-                        words5_answers[i]="";
-                        correct = true;
-                    }
-                    break;
+                    //case 13:
+                    //if (words5_answers[i].equals(x)){
+                    //    System.out.println("Word "+words5[i]+" found! "+(--left)+ " left.");
+                    //    words5_answers[i]="";
+                    //    correct = true;
+                    //}
+                    //break;
                 }
             }
             if (correct==false){
