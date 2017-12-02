@@ -495,18 +495,18 @@ class Wordsdearch {
         int left = num;
         while (left>0){
             String x = sc.next();
-            if(x.equals("e")|| x.equals("exit")){
+            if(x.equalsIgnoreCase("e")|| x.equalsIgnoreCase("exit")){
                 System.out.println("Do you really want to exit? [y/n]");
                 boolean valid = false;
                 while (valid == false){
                     String e = sc.next();
-                    if (e.equals("y")||e.equals("yes")){
+                    if (e.equalsIgnoreCase("y")||e.equalsIgnoreCase("yes")){
                         System.out.println("Exiting...");
                         quitter = true;
                         left = -1;
                         valid = true;
                     }
-                    else if (e.equals("n")||e.equals("no")){
+                    else if (e.equalsIgnoreCase("n")||e.equalsIgnoreCase("no")){
                         System.out.println("Continuing...");
                         valid = true;
                     }
