@@ -5,7 +5,6 @@ class Wordsdearch {
     static char ws_easy[][]= {{'C','S','M','F','S','N','O','W'},{'O','C','B','R','C','S','M','H'},{'A','A','Q','O','O','B','V','K'},{'T','R','E','S','L','F','E','I'},{'W','F','O','T','D','Q','S','Z',},{'L','W','K','Y','Q','I','C','E'},{'V','Q','W','I','G','L','O','O'},{'H','W','I','N','T','E','R','N'}};
     static char ws_medium[][]= {{'X','D','I','Y','Z','P','A','N','H','S'},{'T','N','I','E','C','O','R','O','A','V',},{'N','U','Z','L','S','B','C','S','Y','G'},{'E','O','B','E','K','O','H','M','T','C'},{'D','S','C','L','X','K','A','I','L','A'},{'N','N','Y','U','M','N','I','R','E','R'},{'I','U','H','K','Y','U','C','C','V','P'},{'P','M','Z','U','Y','D','G','F','O','E'},{'C','R','O','S','S','B','A','R','N','T'},{'A','W','Y','Y','F','O','N','D','U','E'}};
 
-
     static char ws_3n[][]= new char[7][7];
     static char ws_4n[][]= new char[9][9];
 
@@ -116,7 +115,7 @@ class Wordsdearch {
         Print(10,10,10,2);
         Answers(10,2);
     }
-    
+
     public static void Custom (){
         int x = 0;
 
@@ -498,14 +497,22 @@ class Wordsdearch {
             String x = sc.next();
             if(x.equals("e")|| x.equals("exit")){
                 System.out.println("Do you really want to exit? [y/n]");
-                String e = sc.next();
-                if (e.equals("y")||e.equals("yes")){
-                    System.out.println("Exiting...");
-                    quitter = true;
-                    left = -1;
-                }
-                else {
-                    System.out.println("Continuing...");
+                boolean valid = false;
+                while (valid == false){
+                    String e = sc.next();
+                    if (e.equals("y")||e.equals("yes")){
+                        System.out.println("Exiting...");
+                        quitter = true;
+                        left = -1;
+                        valid = true;
+                    }
+                    else if (e.equals("n")||e.equals("no")){
+                        System.out.println("Continuing...");
+                        valid = true;
+                    }
+                    else {
+                        System.out.println("Invalid input. Try again");
+                    }
                 }
                 correct = true;
             }
